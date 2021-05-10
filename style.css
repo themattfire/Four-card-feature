@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  --darkblue: hsl(234, 12%, 34%);
+  --gray: hsl(229, 6%, 66%);
+  --light: hsl(0, 0%, 98%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--darkblue);
+  background-color: var(--light);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.1rem;
+  color: var(--gray);
+}
+
+.title {
+  max-width: 90%;
+  margin: 10rem auto;
+  margin-bottom: 5rem;
+}
+
+.title h2,
+h1 {
+  text-align: center;
+}
+
+.title__text {
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+  text-align: center;
+  color: var(--gray);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+}
+
+.cards h3 {
+  padding: 1.5rem;
+}
+
+.cards p {
+  padding-left: 1.5rem;
+  width: 90%;
+}
+
+.cards img {
+  margin: 3rem 1.5rem 3rem 0;
+  text-align: right;
+}
+
+figure {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.cards__card {
+  background-color: white;
+  width: 300px;
+  height: 100%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 2px 7px 20px -5px rgba(0, 0, 0, 0.15);
+}
+
+.cards__card--cyan {
+  border-top: 2px solid var(--cyan);
+}
+
+.cards__card--red {
+  border-top: 2px solid var(--red);
+}
+
+.cards__card--orange {
+  border-top: 2px solid var(--orange);
+}
+
+.cards__card--blue {
+  border-top: 2px solid var(--blue);
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .title {
+    max-width: 35%;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 2em 1em;
+    grid-template-areas:
+      '. team-builder .'
+      'supervisor team-builder calculator'
+      'supervisor karma calculator'
+      '. karma .';
+    width: 70%;
+  }
+
+  .cards__card {
+    min-width: 400px;
+    max-height: 230px;
+  }
+  .cards__card--cyan {
+    grid-area: supervisor;
+  }
+
+  .cards__card--red {
+    grid-area: team-builder;
+  }
+
+  .cards__card--orange {
+    grid-area: karma;
+  }
+
+  .cards__card--blue {
+    grid-area: calculator;
+  }
+
+  .cards__card p {
+    max-width: 70%;
+  }
+}
