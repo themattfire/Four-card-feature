@@ -78,8 +78,8 @@ Some code snippets:
 
 ## Author
 
-Made with love by [themattfire](github.com/themattfire)
+Made with love by [@themattfire](github.com/themattfire)
 
 ## Acknowledgments
 
-To my beautiful fiancée for helping me on my dev journey @alexcamachogz ❤
+To my beautiful fiancée for supporting me with my dev journey [@alexcamachogz](github.com/alexcamachogz) ❤
